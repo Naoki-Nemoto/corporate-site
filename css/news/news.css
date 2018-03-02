@@ -4,22 +4,30 @@ html {
 
 header {
   background: #eaf2f4;
-  margin-top: 5px;
 }
 header #header_in {
   padding-top: 10px;
   padding-bottom: 4px;
 }
+@media (min-width: 550px) {
+  header #header_in {
+    padding: 15px 0 10px 0;
+  }
+}
+header #header_in h1 {
+  margin: 0;
+  padding: 0;
+}
 @media (max-width: 550px) {
-  header .logo {
+  header #header_in .logo {
     width: 190px;
   }
-  header .navi {
+  header #header_in .navi {
     width: 40px;
     float: right;
   }
 }
-header .sp_navi_li {
+header #header_in .sp_navi_li {
   width: 180px;
   position: absolute;
   top: 50px;
@@ -31,35 +39,32 @@ header .sp_navi_li {
   display: none;
   z-index: 100;
 }
-header .sp_navi_li li {
+header #header_in .sp_navi_li li {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-header .sp_navi_li li a {
+header #header_in .sp_navi_li li a {
   display: block;
   padding: 10px 8px;
   border-bottom: 1px solid #eee;
   font-size: 14px;
   text-decoration: none;
 }
-@media (min-width: 551px) {
-  header .sp_navi {
+@media (min-width: 550px) {
+  header #header_in .sp_navi {
     display: none;
   }
-  header #header_in {
-    padding: 15px 0 10px 0;
-  }
-  header .pc_navi_li {
+  header #header_in .pc_navi_li {
     margin: 0;
     padding: 0;
   }
-  header .pc_navi_li li {
+  header #header_in .pc_navi_li li {
     list-style: none;
     margin: 5px 0 0 0;
     padding: 0;
   }
-  header .pc_navi_li li a {
+  header #header_in .pc_navi_li li a {
     color: #626262;
     text-decoration: none;
     font-weight: bold;
@@ -68,10 +73,10 @@ header .sp_navi_li li a {
     float: left;
     padding-right: 10px;
   }
-  header .pc_navi_li li a:hover {
+  header #header_in .pc_navi_li li a:hover {
     color: #42b9d0;
   }
-  header li.navi_toppage a {
+  header #header_in li.navi_toppage a {
     background-repeat: no-repeat;
     display: inline-block;
     line-height: 40px;
@@ -80,13 +85,13 @@ header .sp_navi_li li a {
     background-size: 40px 40px;
   }
 }
-@media screen and (min-width: 551px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 551px) and (min-resolution: 2dppx) {
-  header li.navi_toppage a {
+@media screen and (min-width: 550px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 550px) and (min-resolution: 2dppx) {
+  header #header_in li.navi_toppage a {
     background-image: url("../../images/top/navi_top@2x.png");
   }
 }
-@media (min-width: 551px) {
-  header li.navi_news a {
+@media (min-width: 550px) {
+  header #header_in li.navi_news a {
     background-repeat: no-repeat;
     display: inline-block;
     line-height: 40px;
@@ -95,13 +100,13 @@ header .sp_navi_li li a {
     background-size: 40px 40px;
   }
 }
-@media screen and (min-width: 551px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 551px) and (min-resolution: 2dppx) {
-  header li.navi_news a {
+@media screen and (min-width: 550px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 550px) and (min-resolution: 2dppx) {
+  header #header_in li.navi_news a {
     background-image: url("../../images/top/navi_news@2x.png");
   }
 }
-@media (min-width: 551px) {
-  header li.navi_company a {
+@media (min-width: 550px) {
+  header #header_in li.navi_company a {
     background-repeat: no-repeat;
     display: inline-block;
     line-height: 40px;
@@ -110,14 +115,14 @@ header .sp_navi_li li a {
     background-size: 40px 40px;
   }
 }
-@media screen and (min-width: 551px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 551px) and (min-resolution: 2dppx) {
-  header li.navi_company a {
+@media screen and (min-width: 550px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 550px) and (min-resolution: 2dppx) {
+  header #header_in li.navi_company a {
     background-image: url("../../images/top/navi_company@2x.png");
   }
 }
 
 @media (max-width: 550px) {
-  header .pc_navi {
+  header #header_in .pc_navi {
     display: none;
   }
 }
@@ -247,6 +252,9 @@ header .sp_navi_li li a {
 #contents #sidebar .pc_sidemenu li a {
   color: #339fd1;
   text-decoration: none;
+}
+#contents #sidebar .pc_sidemenu li a:hover {
+  color: #42b9d0;
 }
 
 footer {
